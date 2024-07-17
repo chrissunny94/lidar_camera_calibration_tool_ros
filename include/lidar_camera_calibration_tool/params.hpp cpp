@@ -1,0 +1,13 @@
+#ifndef PARAMS_HPP
+#define PARAMS_HPP
+
+// Define your parameters here
+constexpr float HORIZONTAL_FOV_CAM = 60.0f;
+constexpr float VERTICAL_FOV_CAM = 115.0f;
+constexpr float PC_D_DIS_MAX = 200.0f;
+constexpr float PC_D_DIS_MIN = 1.0f;
+constexpr int POINT_SIZE = 1;
+constexpr int WIDTH_PIXELS = 1920;
+constexpr int HEIGHT_PIXELS = 1090;
+
+#endif // PARAMS_HPP
