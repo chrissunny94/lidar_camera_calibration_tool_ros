@@ -25,9 +25,38 @@ include_directories(
 
 add_executable(image_pcd_overlay_subscriber_publisher
   src/image_pcd_overlay_subscriber_publisher.cpp
+
+)
+
+add_executable(camera_intrinsics
+  src/camera_intrinsics.cpp
+)
+add_executable(camera_lidar_calibration
+  src/camera_lidar_calibration.cpp
 )
 
 target_link_libraries(image_pcd_overlay_subscriber_publisher
+  ${catkin_LIBRARIES}
+  ${PCL_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+)
+
+target_link_libraries(camera_lidar_calibration
+  ${catkin_LIBRARIES}
+  ${PCL_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+)
+
+target_link_libraries(camera_intrinsics
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+)
+
+add_executable(plane_detection
+  src/plane_detection.cpp
+)
+
+target_link_libraries(plane_detection
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
   ${OpenCV_LIBRARIES}
